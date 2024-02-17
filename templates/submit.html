@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOL OverPy</title>
+        <link rel="stylesheet" href="static/main.css">
+    </head>
+    <body>
+        <form action="/submit" method="POST">
+            <label for="btAbr">Blue Team</label><br>
+            <input type="text" id="btAbr" name="btAbr" value="{{ btAbr }}"><br>
+            <label for="btAbr">Blue Score</label><br>
+            <input type="text" id="btScr" name="btScr" value="{{ btScr }}"><br>
+            <label for="btAbr">Red Team</label><br>
+            <input type="text" id="rtAbr" name="rtAbr" value="{{ rtAbr }}"><br>
+            <label for="btAbr">Red Score</label><br>
+            <input type="text" id="rtScr" name="rtScr" value="{{ rtScr }}"><br>
+            <label for="btAbr">Patch Number</label><br>
+            <input type="text" id="patchno" name="patchno" value="{{ patchno }}"><br>
+            <label for="btAbr">Game Number</label><br>
+            <input type="text" id="gameno" name="gameno" value="{{ gameno }}"><br>
+            <br>
+            <label for="swap">Swap?</label>
+            <input type="checkbox" id="swap" name="swap" value="false">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
