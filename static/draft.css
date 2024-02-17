@@ -1,0 +1,92 @@
+body {
+    background-color: transparent;
+}
+
+#overlayimg {
+    margin-top: -8px;
+    margin-left: -8px;
+    width: 1920px;
+    height: 1080px;
+}
+
+#blueTeam {
+    position: absolute;
+    top: -78px;
+    left: 306px;
+    right: 1535px;
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: black; */
+}
+
+div#BTScore {
+    position: absolute;
+    top: 28px;
+    left: 448px;
+    right: 1515px;
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: black; */
+}
+
+p.score {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Roboto Slab';
+}
+
+#redTeam {
+    position: absolute;
+    top: -78px;
+    left: 1456px;
+    right: 386px;
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: black; */
+}
+
+div#RTScore {
+    position: absolute;
+    top: 28px;
+    left: 1434px;
+    right: 526px;
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: black; */
+}
+
+#patch {
+    position: absolute;
+    top: 892px;
+    left: 0px;
+    right: 1498px;
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: black; */
+}
+
+#game {
+    position: absolute;
+    top: 980px;
+    left: 0px;
+    right: 1498px;
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: black; */
+}
+
+p.info {
+    color: white;
+    font-size: 72px;
+    text-align: center;
+    font-family: 'Roboto Slab';
+    margin-top: 0px;
+}
+
+p.team {
+    color: white;
+    font-size: 72px;
+    text-align: center;
+    font-family: 'Roboto Slab';
+}

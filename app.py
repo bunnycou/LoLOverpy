@@ -9,10 +9,14 @@ rs="0"
 pn="14.1"
 gn="1"
 
-@app.route("/")
-def index():
+@app.route("/game")
+def game():
     # Path to your HTML file relative to the Python file
     return render_template("overlay.html", btAbr=bt, rtAbr=rt, btScr=bs, rtScr=rs, patchno=pn, gameno=gn)
+
+@app.route("/draft")
+def draft():
+    return render_template("draft.html", btAbr=bt, rtAbr=rt, btScr=bs, rtScr=rs, patchno=pn, gameno=gn)
 
 @app.route("/submit", methods=['Get','POST'])
 def submit():
