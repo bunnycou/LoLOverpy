@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import time
 
 app = Flask(__name__)
 
@@ -32,4 +33,6 @@ def submit():
         if swap:
             bt, rt = rt, bt
             bs, rs = rs, bs
-    return render_template("submit.html", btAbr=bt, rtAbr=rt, btScr=bs, rtScr=rs, patchno=pn, gameno=gn)
+        return render_template("submit.html", btAbr=bt, rtAbr=rt, btScr=bs, rtScr=rs, patchno=pn, gameno=gn, time="Updated at "+time.strftime("%H:%M:%S"))
+    else:
+        return render_template("submit.html", btAbr=bt, rtAbr=rt, btScr=bs, rtScr=rs, patchno=pn, gameno=gn, time="")
