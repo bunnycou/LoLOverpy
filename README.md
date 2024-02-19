@@ -1,4 +1,4 @@
-# LoLOverpy
+# Overpy
 Python based webserver for adding a very simple overlay for casting league of legends or smash in OBS or other programs
 
 ## How to use
