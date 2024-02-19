@@ -9,7 +9,7 @@ body {
     height: 1080px;
 }
 
-#blueTeam {
+div#blue {
     position: absolute;
     top: -78px;
     left: 306px;
@@ -19,7 +19,7 @@ body {
     outline-color: black; */
 }
 
-div#BTScore {
+div#blueScore {
     position: absolute;
     top: 28px;
     left: 448px;
@@ -36,7 +36,7 @@ p.score {
     font-family: 'Roboto Slab';
 }
 
-#redTeam {
+div#red {
     position: absolute;
     top: -78px;
     left: 1456px;
@@ -46,7 +46,7 @@ p.score {
     outline-color: black; */
 }
 
-div#RTScore {
+div#redScore {
     position: absolute;
     top: 28px;
     left: 1434px;
@@ -56,7 +56,7 @@ div#RTScore {
     outline-color: black; */
 }
 
-#patch {
+div#patch {
     position: absolute;
     top: 892px;
     left: 0px;
@@ -66,7 +66,7 @@ div#RTScore {
     outline-color: black; */
 }
 
-#game {
+div#game {
     position: absolute;
     top: 980px;
     left: 0px;

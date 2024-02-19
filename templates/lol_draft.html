@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOL OverPy</title>
+        <link rel="stylesheet" href="static/lol_draft.css">
+        <!-- <script>
+            function refreshPage() {
+                location.reload(); // Refresh the entire page
+            }
+            setInterval(refreshPage, 1000);
+        </script> -->
+    </head>
+    <body>
+        <img src="static/LoLDraftOverlayV2.png" id="overlayimg"/>
+        <div id="blue"><p id="blue" class="team">{{ blue }}</p></div>
+        <div id="red"><p id="red" class="team">{{ red }}</p></div>
+        <div id="blueScore"><p id="blueScore" class="score">{{ blueScore }}</p></div>
+        <div id="redScore"><p id="redScore" class="score">{{ redScore }}</p></div>
+        <div id="patch"><p id="patch" class="info">Patch {{ patch }}</p></div>
+        <div id="game"><p id="game" class="info">Game {{ game }}</p></div>
+    </body>
+</html>
