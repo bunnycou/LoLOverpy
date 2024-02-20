@@ -9,6 +9,18 @@ body {
     height: 1080px;
 }
 
+div#info {
+    position: absolute;
+    top: 600px;
+    left: 0px;
+    right:80px;
+}
+
+p#info {
+    text-align: center;
+    text-shadow: -6px 10px 4px black;
+}
+
 div#red {
     position: absolute;
     top: 900px;
@@ -84,26 +96,24 @@ div#bluePlayerCount {
 p {
     margin-top: 0;
     font-family: 'Roboto Slab';
-}
-
-p.team {
     color: white;
     font-size: 150px;
 }
 
+p.team {
+    font-size: 150px;
+}
+
 p.score {
-    color: white;
     font-size: 80px;
 
 }
 
 p.stocks {
-    color: white;
     font-size: 150px;
 }
 
 p.players {
-    color: white;
     font-size: 60px;
 }
 

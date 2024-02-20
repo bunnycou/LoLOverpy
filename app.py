@@ -82,6 +82,12 @@ def bluePlayerCt():
 def playerCt(stocks):
     return ceil(stocks/3)
 
+@app.route("/smashbrb")
+def smashbrb():
+    Smash_redPlayerCount = redPlayerCt()
+    Smash_bluePlayerCount = bluePlayerCt()
+    return render_template("smash_brb.html", blue=Smash_blue, red=Smash_red, blueStocks=Smash_blueStocks, redStocks=Smash_redStocks, bluePlayers=Smash_bluePlayerCount, redPlayers=Smash_redPlayerCount)
+
 @app.route("/smashsubmit", methods=['Get','POST'])
 def smashsubmit():
     global Smash_red, Smash_redScore, Smash_redStocks, Smash_blue, Smash_blueScore, Smash_blueStocks
