@@ -11,7 +11,7 @@ body {
 
 div#blue {
     position: absolute;
-    top: -68px;
+    top: -10px;
     left: 340px;
     right: 1535px;
     /* outline-style: solid;
@@ -21,7 +21,7 @@ div#blue {
 
 div#blueScore {
     position: absolute;
-    top: 22px;
+    top: 46px;
     left: 448px;
     right: 1515px;
     /* outline-style: solid;
@@ -29,16 +29,9 @@ div#blueScore {
     outline-color: black; */
 }
 
-p.score {
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Roboto Slab';
-}
-
 div#red {
     position: absolute;
-    top: -68px;
+    top: -10px;
     left: 1468px;
     right: 405px;
     /* outline-style: solid;
@@ -48,8 +41,8 @@ div#red {
 
 div#redScore {
     position: absolute;
-    top: 22px;
-    left: 1448px;
+    top: 46px;
+    left: 1446px;
     right: 516px;
     /* outline-style: solid;
     outline-width: 2px;
@@ -76,17 +69,22 @@ div#game {
     outline-color: black; */
 }
 
-p.info {
+p {
     color: white;
-    font-size: 48px;
     text-align: center;
     font-family: 'Roboto Slab';
     margin-top: 0px;
 }
 
+p.score {
+    font-size: 24px;
+}
+
+p.info {
+    font-size: 48px;
+    
+}
+
 p.team {
-    color: white;
     font-size: 60px;
-    text-align: center;
-    font-family: 'Roboto Slab';
 }
