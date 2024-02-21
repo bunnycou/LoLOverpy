@@ -48,9 +48,9 @@ def lolsubmit():
         if swap:
             LoL_blue, LoL_red = LoL_red, LoL_blue
             LoL_blueScore, LoL_redScore = LoL_redScore, LoL_blueScore
-        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game, time="Updated at "+time.strftime("%H:%M:%S"))
+        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
     else:
-        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game, time="")
+        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
     
 #Smash Pages
 @app.route("/smash")
@@ -103,6 +103,6 @@ def smashsubmit():
             Smash_red, Smash_blue = Smash_blue, Smash_red
             Smash_redScore, Smash_blueScore = Smash_blueScore, Smash_redScore
             Smash_redStocks, Smash_blueStocks = Smash_blueStocks, Smash_redStocks
-        return render_template("smash_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks, time="Updated at "+time.strftime("%H:%M:%S"))
+        return render_template("smash_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks)
     else:
-        return render_template("smash_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks, time="")
+        return render_template("smash_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks)

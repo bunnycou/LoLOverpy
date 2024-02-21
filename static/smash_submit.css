@@ -9,8 +9,13 @@ label {
 input {
     color: white;
     background-color: #191b26;
+    width: 50px;
 }
 
 p {
     color: white;
+}
+
+input#submit {
+    width: 60px;
 }
