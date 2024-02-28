@@ -11,9 +11,9 @@ body {
 
 div#blue {
     position: absolute;
-    top: 0px;
-    left: 340px;
-    right: 1535px;
+    top: -10px;
+    left: 218px;
+    right: 1556px;
     /* outline-style: solid;
     outline-width: 2px;
     outline-color: black; */
@@ -31,9 +31,9 @@ div#blueScore {
 
 div#red {
     position: absolute;
-    top: 0px;
-    left: 1468px;
-    right: 405px;
+    top: -10px;
+    left: 1488px;
+    right: 282px;
     /* outline-style: solid;
     outline-width: 2px;
     outline-color: black; */
@@ -86,5 +86,5 @@ p.info {
 }
 
 p.team {
-    font-size: 48px;
+    font-size: 60px;
 }

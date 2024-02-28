@@ -12,8 +12,8 @@ body {
 div#blue {
     position: absolute;
     top: 0px;
-    left: 306px;
-    right: 1516px;
+    left: 320px;
+    right: 1430px;
     /* outline-style: solid;
     outline-width: 2px;
     outline-color: black; */
@@ -21,9 +21,9 @@ div#blue {
 
 div#blueScore {
     position: absolute;
-    top: 58px;
-    left: 466px;
-    right: 1515px;
+    top: 90px;
+    left: 320px;
+    right: 1630px;
     /* outline-style: solid;
     outline-width: 2px;
     outline-color: black; */
@@ -32,8 +32,8 @@ div#blueScore {
 div#red {
     position: absolute;
     top: 0px;
-    left: 1438px;
-    right: 386px;
+    left: 1346px;
+    right: 406px;
     /* outline-style: solid;
     outline-width: 2px;
     outline-color: black; */
@@ -41,9 +41,9 @@ div#red {
 
 div#redScore {
     position: absolute;
-    top: 58px;
-    left: 1420px;
-    right: 526px;
+    top: 90px;
+    left: 1546px;
+    right: 404px;
     /* outline-style: solid;
     outline-width: 2px;
     outline-color: black; */

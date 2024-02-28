@@ -43,14 +43,14 @@ def lolsubmit():
         LoL_blueScore=request.form['blueScore']
         LoL_redScore=request.form['redScore']
         LoL_patch=request.form['patch']
-        LoL_game=request.form['game']
+        LoL_game=str(int(LoL_blueScore)+int(LoL_redScore)+1)
         swap = request.form.get("swap")
         if swap:
             LoL_blue, LoL_red = LoL_red, LoL_blue
             LoL_blueScore, LoL_redScore = LoL_redScore, LoL_blueScore
-        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
+        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch)
     else:
-        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
+        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch)
     
 #Smash Pages
 @app.route("/smash")
