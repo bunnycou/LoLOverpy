@@ -21,7 +21,7 @@ div#blue {
 
 div#blueScore {
     position: absolute;
-    top: 90px;
+    top: 84px;
     left: 320px;
     right: 1630px;
     /* outline-style: solid;
@@ -41,7 +41,7 @@ div#red {
 
 div#redScore {
     position: absolute;
-    top: 90px;
+    top: 84px;
     left: 1546px;
     right: 404px;
     /* outline-style: solid;
@@ -78,7 +78,7 @@ p.team {
 }
 
 p.score {
-    font-size: 24px;
+    font-size: 36px;
 }
 
 p {
