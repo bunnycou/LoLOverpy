@@ -12,7 +12,11 @@ LoL_redScore="0"
 LoL_patch="14.1"
 LoL_game="1"
 
-#Smash Vars
+#Smash 1v1 Vars
+Smash_P1="Name"
+Smash_P2="Name"
+
+#Smash Crew Vars
 Smash_red="UT"
 Smash_blue="UT"
 Smash_redScore="0"
@@ -28,11 +32,11 @@ filled_circle = "●"
 #LoL Pages
 @app.route("/lolgame")
 def lolgame():
-    return render_template("lol_game.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
+    return render_template("lol/lol_game.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
 
 @app.route("/loldraft")
 def loldraft():
-    return render_template("lol_draft.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
+    return render_template("lol/lol_draft.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch, game=LoL_game)
 
 @app.route("/lolsubmit", methods=['Get','POST'])
 def lolsubmit():
@@ -48,16 +52,15 @@ def lolsubmit():
         if swap:
             LoL_blue, LoL_red = LoL_red, LoL_blue
             LoL_blueScore, LoL_redScore = LoL_redScore, LoL_blueScore
-        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch)
-    else:
-        return render_template("lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch)
+
+    return render_template("lol/lol_submit.html", blue=LoL_blue, red=LoL_red, blueScore=LoL_blueScore, redScore=LoL_redScore, patch=LoL_patch)
     
 #Smash Pages
-@app.route("/smash")
-def smash():
+@app.route("/smash-crew")
+def smashcrew():
     Smash_redPlayerCount = redPlayerCt()
     Smash_bluePlayerCount = bluePlayerCt()
-    return render_template("smash_game.html", blue=Smash_blue, red=Smash_red, blueScore=Smash_blueScore, redScore=Smash_redScore, blueStocks=Smash_blueStocks, redStocks=Smash_redStocks, bluePlayerCount=Smash_bluePlayerCount, redPlayerCount=Smash_redPlayerCount)
+    return render_template("smash_crew/smash_crew_game.html", blue=Smash_blue, red=Smash_red, blueScore=Smash_blueScore, redScore=Smash_redScore, blueStocks=Smash_blueStocks, redStocks=Smash_redStocks, bluePlayerCount=Smash_bluePlayerCount, redPlayerCount=Smash_redPlayerCount)
 
 def redPlayerCt():
     ret = ""
@@ -82,14 +85,14 @@ def bluePlayerCt():
 def playerCt(stocks):
     return ceil(stocks/3)
 
-@app.route("/smashbrb")
-def smashbrb():
+@app.route("/smash-crew-brb")
+def smashcrewbrb():
     Smash_redPlayerCount = redPlayerCt()
     Smash_bluePlayerCount = bluePlayerCt()
-    return render_template("smash_brb.html", blue=Smash_blue, red=Smash_red, blueStocks=Smash_blueStocks, redStocks=Smash_redStocks, bluePlayers=Smash_bluePlayerCount, redPlayers=Smash_redPlayerCount)
+    return render_template("smash_crew/smash_crew_brb.html", blue=Smash_blue, red=Smash_red, blueStocks=Smash_blueStocks, redStocks=Smash_redStocks, bluePlayers=Smash_bluePlayerCount, redPlayers=Smash_redPlayerCount)
 
-@app.route("/smashsubmit", methods=['Get','POST'])
-def smashsubmit():
+@app.route("/smash-crew-submit", methods=['Get','POST'])
+def smashcrewsubmit():
     global Smash_red, Smash_redScore, Smash_redStocks, Smash_blue, Smash_blueScore, Smash_blueStocks
     if request.method == "POST":
         Smash_red = request.form["red"]
@@ -103,6 +106,27 @@ def smashsubmit():
             Smash_red, Smash_blue = Smash_blue, Smash_red
             Smash_redScore, Smash_blueScore = Smash_blueScore, Smash_redScore
             Smash_redStocks, Smash_blueStocks = Smash_blueStocks, Smash_redStocks
-        return render_template("smash_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks)
-    else:
-        return render_template("smash_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks)
+    
+    return render_template("smash_crew/smash_crew_submit.html", red=Smash_red, redScore=Smash_redScore, redStocks=Smash_redStocks, blue=Smash_blue, blueScore=Smash_blueScore, blueStocks=Smash_blueStocks)
+    
+# for smaash 1v1s
+# need just player name, main, brb, submit
+@app.route("/smash-1v1")
+def smash1v1():
+    return render_template("smash_1v1/smash_1v1_game.html", player1=Smash_P1, player2=Smash_P2)
+
+@app.route("/smash-1v1-brb")
+def smash1v1brb():
+    return render_template("smash_1v1/smash_1v1_brb.html")
+
+@app.route("/smash-1v1-submit", methods=['Get', 'POST'])
+def smash1v1submit():
+    global Smash_P1, Smash_P2
+    if request.method == "POST":
+        Smash_P1 = request.form["player1"]
+        Smash_P2 = request.form["player2"]
+        swap = request.form.get("swap")
+        if swap:
+            Smash_P1, Smash_P2 = Smash_P2, Smash_P1
+        
+    return render_template("smash_1v1/smash_1v1_submit.html", player1=Smash_P1, player2=Smash_P2)
