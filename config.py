@@ -1,3 +1,0 @@
-{
-    "accentColor":"00aeff"
-}

@@ -1,0 +1,19 @@
+:root {
+    --blue: #0099e0;
+    --red: #e83d3d;
+    --font-fam: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div#titleBlockBlue {
+    width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+    background: var(--blue);
+}
+
+div#titleBlockRed {
+    width: 100px;
+	height: 50px;
+	transform: skew(-20deg);
+    background: var(--red);
+}
