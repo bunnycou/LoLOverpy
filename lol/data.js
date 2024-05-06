@@ -3,7 +3,6 @@ var blueScore =  localStorage.getItem("blueScore")
 var red = localStorage.getItem("red")
 var redScore = localStorage.getItem("redScore")
 var patch = localStorage.getItem("patch")
-var swap = localStorage.getItem("swap")
 
 if (blue == null) {
     blue == "Blue"
@@ -39,7 +38,7 @@ function storeVars() {
     let redVar = document.getElementById("red").value
     let redScoreVar = document.getElementById("redScore").value
     let patchVar = document.getElementById("patch").value
-    let swapVar = document.getElementById("swap").value
+    let swapVar = document.getElementById("swap").checked
     
     if (swapVar) {
         var tmp
@@ -56,6 +55,6 @@ function storeVars() {
     localStorage.setItem("blueScore", blueScoreVar)
     localStorage.setItem("red", redVar)
     localStorage.setItem("redScore", redScoreVar)
-    localStorage.setItem("game", blueScoreVar+redScoreVar)
+    localStorage.setItem("game", parseInt(blueScoreVar)+parseInt(redScoreVar)+1)
     localStorage.setItem("patch", patchVar)
 }
