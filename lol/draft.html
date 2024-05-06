@@ -3,15 +3,24 @@
     <head>
         <title>LOL Draft OverPy</title>
         <link rel="stylesheet" href="../css/lol.css">
+        <script src="draft.js"></script>
     </head>
     <body>
-        <div id="titleBlockBlue"></div>
-        <div id="titleBlockRed"></div>
-        <div id="blue"><p id="blue" class="team">{{ blue }}</p></div>
-        <div id="red"><p id="red" class="team">{{ red }}</p></div>
-        <div id="blueScore"><p id="blueScore" class="score">{{ blueScore }}</p></div>
-        <div id="redScore"><p id="redScore" class="score">{{ redScore }}</p></div>
-        <div id="patch"><p id="patch" class="info">Patch {{ patch }}</p></div>
-        <div id="game"><p id="game" class="info">Game {{ game }}</p></div>
+        <div class="draft_titleBlock" id="draft_titleBlockBlue">
+            <p class="draft_titleBlock" id="blueTeam">Blue</p>
+            <div class="draft_scoreBlock" id="draft_scoreBlockBlue">
+                <p class="draft_scoreBlock" id="blueScore">0</p>
+            </div>
+        </div>
+        <div class="draft_titleBlock" id="draft_titleBlockRed">
+            <p class="draft_titleBlock" id="redTeam">Red</p>
+            <div class="draft_scoreBlock" id="draft_scoreBlockRed">
+                <p class="draft_scoreBlock" id="redScore">0</p>
+            </div>
+        </div>
+        <div id="draft_bottom">
+            <p id="draft_game">Game 1</p>
+            <p id="draft_patch">Patch 14.10</p>
+        </div>
     </body>
 </html>

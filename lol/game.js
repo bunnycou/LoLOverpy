@@ -1,0 +1,6 @@
+document.getElementById("blueTeam").value = localStorage.getItem("blue")
+document.getElementById("blueScore").value = localStorage.getItem("blueScore")
+document.getElementById("redTeam").value = localStorage.getItem("red")
+document.getElementById("redScore").value = localStorage.getItem("redScore")
+document.getElementById("game_game").value = localStorage.getItem("game")
+document.getElementById("game_patch").value = localStorage.getItem("patch")

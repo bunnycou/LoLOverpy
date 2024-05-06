@@ -56,5 +56,6 @@ function storeVars() {
     localStorage.setItem("blueScore", blueScoreVar)
     localStorage.setItem("red", redVar)
     localStorage.setItem("redScore", redScoreVar)
+    localStorage.setItem("game", blueScoreVar+redScoreVar)
     localStorage.setItem("patch", patchVar)
 }

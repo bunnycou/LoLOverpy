@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LOL OverPy</title>
-        <link rel="stylesheet" href="static/lol/lol_game.css">
-        <!-- <script>
-            function refreshPage() {
-                location.reload(); // Refresh the entire page
-            }
-            setInterval(refreshPage, 1000);
-        </script> -->
+        <title>LOL Game OverPy</title>
+        <link rel="stylesheet" href="../css/lol.css">
+        <script src="game.js"></script>
     </head>
     <body>
-        <img src="static/lol/LoLOverlayV3.png" id="overlayimg"/>
-        <div id="blue"><p id="blue" class="team">{{ blue }}</p></div>
-        <div id="red"><p id="red" class="team">{{ red }}</p></div>
-        <div id="blueScore"><p id="blueScore" class="score">{{ blueScore }}</p></div>
-        <div id="redScore"><p id="redScore" class="score">{{ redScore }}</p></div>
-        <div id="patch"><p id="patch" class="info">Patch {{ patch }}</p></div>
-        <div id="game"><p id="game" class="info">Game {{ game }}</p></div>
+        <div class="game_titleBlock" id="game_titleBlockBlue">
+            <p class="game_titleBlock" id="blueTeam">Blue</p>
+            <div class="game_scoreBlock" id="game_scoreBlockBlue">
+                <p class="game_scoreBlock" id="blueScore">0</p>
+            </div>
+        </div>
+        <div class="game_titleBlock" id="game_titleBlockRed">
+            <p class="game_titleBlock" id="redTeam">Red</p>
+            <div class="game_scoreBlock" id="game_scoreBlockRed">
+                <p class="game_scoreBlock" id="redScore">0</p>
+            </div>
+        </div>
+        <div id="game_bottom">
+            <p id="game_game">Game 1</p>
+            <p id="game_patch">Patch 14.10</p>
+        </div>
     </body>
 </html>
