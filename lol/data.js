@@ -1,32 +1,22 @@
-var blue = localStorage.getItem("blue")
+var blueName = localStorage.getItem("blue")
 var blueScore =  localStorage.getItem("blueScore")
-var red = localStorage.getItem("red")
+var redName = localStorage.getItem("red")
 var redScore = localStorage.getItem("redScore")
 var patch = localStorage.getItem("patch")
 
-if (blue == null) {
-    blue == "Blue"
-}
+if (!blue) { blueName == "Blue" }
 
-if (blueScore == null) {
-    blueScore = 0
-}
+if (!blueScore) { blueScore = 0 }
 
-if (red == null) {
-    red == "Red"
-}
+if (!red) { redName == "Red" }
 
-if (redScore == null) {
-    redScore = 0
-}
+if (!redScore) { redScore = 0 }
 
-if (patch == null) {
-    patch == "Latest"
-}
+if (!patch) { patch == "Latest" }
 
-document.getElementById("blue").value = blue
+document.getElementById("blue").value = blueName
 document.getElementById("blueScore").value = blueScore
-document.getElementById("red").value = red
+document.getElementById("red").value = redName
 document.getElementById("redScore").value = redScore
 document.getElementById("patch").value = patch
 
